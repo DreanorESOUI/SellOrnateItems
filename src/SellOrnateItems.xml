@@ -1,0 +1,25 @@
+<GuiXml>
+  <Controls>
+    <TopLevelControl name="SellOrnateItemsIndicator">
+      <Dimensions x="200" y="25" />
+      <Anchor point="BOTTOM" relativeTo="GuiRoot" relativePoint="CENTER" offsetY="-20" />
+ 
+      <Controls>
+		<Button name="$(parent)Button" inherits="ZO_ButtonBehaviorClickSound">
+			<Dimensions x="40" y="40" />
+			<Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" />
+			<Textures normal="EsoUI/Art/tradinghouse/tradinghouse_sell_tabicon_up.dds"
+						pressed="EsoUI/Art/tradinghouse/tradinghouse_sell_tabicon_down.dds"
+						mouseOver="EsoUI/Art/tradinghouse/tradinghouse_sell_tabicon_over.dds"/>
+			<OnClicked>
+				SellOrnateItems.SellTrash()
+			</OnClicked>
+		</Button>
+		<Label name="$(parent)Label" width="200" height="25" font="ZoFontWinH1" inheritAlpha="true"
+            wrapMode="TRUNCATE" verticalAlignment="TOP" horizontalAlignment="CENTER"text="Sell all Ornate Items">
+			 <Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetY="-40"/>
+		</Label>
+      </Controls>
+    </TopLevelControl>
+  </Controls>
+</GuiXml>
