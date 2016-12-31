@@ -24,9 +24,9 @@ end
 function SellOrnateItems.SellTrash()
     local slotId = 0
     local bagsize = GetBagSize(1)
-	local totalAmount = 0
-	local itemCount = 0
-	local goldIcon = ZO_Currency_GetPlatformFormattedGoldIcon()
+    local totalAmount = 0
+    local itemCount = 0
+    local goldIcon = ZO_Currency_GetPlatformFormattedGoldIcon()
     for slotId = 0,bagsize do
         if GetItemTrait(1,slotId)==ITEM_TRAIT_TYPE_ARMOR_ORNATE or GetItemTrait(1,slotId)==ITEM_TRAIT_TYPE_WEAPON_ORNATE or GetString("SI_ITEMTRAITTYPE",GetItemTrait(1,slotId))=="Ornate" then
             SellInventoryItem(1,slotId,1)
