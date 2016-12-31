@@ -9,7 +9,7 @@ end
 function SellOrnateItems.OnAddOnLoaded(event, addonName)
     if addonName == SellOrnateItems.name then
         SellOrnateItems:Initialize()
-		SellOrnateItemsIndicator:SetHidden(true)
+        SellOrnateItemsIndicator:SetHidden(true)
     end
 end
  
@@ -30,13 +30,13 @@ function SellOrnateItems.SellTrash()
     for slotId = 0,bagsize do
         if GetItemTrait(1,slotId)==ITEM_TRAIT_TYPE_ARMOR_ORNATE or GetItemTrait(1,slotId)==ITEM_TRAIT_TYPE_WEAPON_ORNATE or GetString("SI_ITEMTRAITTYPE",GetItemTrait(1,slotId))=="Ornate" then
             SellInventoryItem(1,slotId,1)
-			local value = GetItemSellValueWithBonuses(1,slotId)
-			totalAmount = totalAmount + value
-			itemCount = itemCount + 1
-			d("Sold: " .. GetItemLink(1,slotId,1) .. " for " .. value .. goldIcon)
+            local value = GetItemSellValueWithBonuses(1,slotId)
+            totalAmount = totalAmount + value
+            itemCount = itemCount + 1
+            d("Sold: " .. GetItemLink(1,slotId,1) .. " for " .. value .. goldIcon)
         end 
     end
-	d("Sold " .. itemCount .. " items for a total of " .. totalAmount .. goldIcon)
+    d("Sold " .. itemCount .. " items for a total of " .. totalAmount .. goldIcon)
 end
 
 EVENT_MANAGER:RegisterForEvent(SellOrnateItems.name, EVENT_ADD_ON_LOADED, SellOrnateItems.OnAddOnLoaded)
