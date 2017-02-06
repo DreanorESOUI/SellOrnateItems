@@ -1,8 +1,8 @@
 ## Description: Sells all items in the inventory to the merchant that give x% more gold.
-## Title: Sell Ornate Items 1.1
+## Title: Sell Ornate Items 1.1.1
 ## Author: NoPantsuNoLife
-## Version: 1.1
-## APIVersion: 100017
+## Version: 1.1.1
+## APIVersion: 100018
 
 SellOrnateItems.xml
 SellOrnateItems.lua
